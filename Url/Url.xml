@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>G8G.UrlTools</name>
+    </assembly>
+    <members>
+        <member name="T:G8G.UrlTools.CodePoints">
+            <summary>
+            Provides static methods to verify characters as certain code points in the Unicode standard. <see cref="!:https://infra.spec.whatwg.org/#code-points"/> for the complete standard.
+            </summary>
+        </member>
+        <member name="M:G8G.UrlTools.CodePoints.IsSurrogate(System.Char)">
+            <summary>
+            Returns true if the character is in range of the Unicode surrogates.
+            </summary>
+            <remarks>
+            The Unicode standard permanently reserves the code point values from U+D800 to U+DFFF for the encoding of high and low surrogates.
+            </remarks>
+            <param name="input">The character to validate.</param>
+            <returns></returns>
+        </member>
+        <member name="M:G8G.UrlTools.Extensions.StringExtension.FirstLetterToUpperCase(System.String)">
+            <summary>
+            Returns the input string with the first character converted to uppercase
+            </summary>
+        </member>
+        <member name="M:G8G.UrlTools.PercentEncoder.ToHValue(System.Byte)">
+            <summary>
+            Returns the hvalue representation of an ASCII encoded hex-digit.
+            </summary>
+            <remarks>
+            A hex digit is a representation of half a byte of memory, meaning two hex digits can describe the value of a byte.
+            It is usually split up into the hvalue (higher value) and lvalue (lower value), each displayed as a single hex digit.
+            </remarks>
+            <example>
+            The string %2B is composed of an hvalue 2 and an lvalue B. In code they could be written as 0x2b and stored in a single byte.
+            When Decoded into an ASCII character, it is displayed as "+" which is 43 in decimal and 2B in hexadecimal.
+            </example>
+            <param name="input">The ASCII representation of a hex digit that needs conversion.</param>
+            <returns>The given input as hvalue.</returns>
+        </member>
+        <member name="M:G8G.UrlTools.PercentEncoder.ToLValue(System.Byte)">
+            <summary>
+            Returns the lvalue representation of an ASCII encoded hex-digit.
+            </summary>
+            <remarks>
+            A hex digit is a representation of half a byte of memory, meaning two hex digits can describe the value of a byte.
+            It is usually split up into the hvalue (higher value) and lvalue (lower value), each displayed as a single hex digit.
+            </remarks>
+            <example>
+            The string %2B is composed of an hvalue 2 and an lvalue B. In code they could be written as 0x2b and stored in a single byte.
+            When Decoded into an ASCII character, it is displayed as "+" which is 43 in decimal and 2B in hexadecimal.
+            </example>
+            <param name="input">The ASCII representation of a hex digit that needs conversion.</param>
+            <returns>The given input as lvalue.</returns>
+        </member>
+        <member name="M:G8G.UrlTools.PercentEncoder.IsInEncodeSet(System.Char)">
+            <summary>
+            Checks whether a given character is in one of the percent-encode sets.
+            </summary>
+            <param name="input">The character to check</param>
+            <returns>Returns true if the given character is in one of the percent-encode sets.</returns>
+        </member>
+        <member name="M:G8G.UrlTools.PercentEncoder.FromLValue(System.Byte)">
+            <summary>
+            Converts the lower 4 bits of the char into its hex representation in ASCII.
+            </summary>
+        </member>
+        <member name="M:G8G.UrlTools.PercentEncoder.FromHValue(System.Byte)">
+            <summary>
+            Converts the upper 4 bits of the char into its hex representation in ASCII.
+            </summary>
+        </member>
+        <member name="T:G8G.UrlTools.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:G8G.UrlTools.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:G8G.UrlTools.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:G8G.UrlTools.Properties.Resources.IdnaMappingTable">
+             <summary>
+               Looks up a localized string similar to # IdnaMappingTable-11.0.0.txt
+            # Date: 2018-03-14, 08:27:19 GMT
+            # © 2018 Unicode®, Inc.
+            # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
+            # For terms of use, see http://www.unicode.org/terms_of_use.html
+            #
+            # Unicode IDNA Compatible Preprocessing (UTS #46)
+            # For documentation, see http://www.unicode.org/reports/tr46/
+            
+            0000..002C    ; disallowed_STD3_valid                  # 1.1  &lt;control-0000&gt;..COMMA
+            002D..002E    ; valid                                  [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="M:G8G.UrlTools.SchemeTypeExtension.GetDefaultPort(G8G.UrlTools.SchemeType)">
+            <summary>
+            TODO: Summary
+            </summary>
+            <param name="schemeType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

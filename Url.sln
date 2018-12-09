@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Url", "Url\Url.csproj", "{EAC997C9-ECFC-4604-A2D6-E9766A03B402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Url", "Url\Url.csproj", "{EAC997C9-ECFC-4604-A2D6-E9766A03B402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlTools.Example", "UrlTools.Example\UrlTools.Example.csproj", "{F4A3081B-1409-423D-9980-C5E96F019593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EAC997C9-ECFC-4604-A2D6-E9766A03B402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAC997C9-ECFC-4604-A2D6-E9766A03B402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAC997C9-ECFC-4604-A2D6-E9766A03B402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A3081B-1409-423D-9980-C5E96F019593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A3081B-1409-423D-9980-C5E96F019593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A3081B-1409-423D-9980-C5E96F019593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A3081B-1409-423D-9980-C5E96F019593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
